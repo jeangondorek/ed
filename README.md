@@ -1,1 +1,3 @@
-# prog-II
+# ED
+
+resolution of exam

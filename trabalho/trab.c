@@ -13,7 +13,7 @@ struct _data{
 struct _aluno{
     char matricula[M];
     char nome[N];
-    struct Data;
+    struct Data *data;
     float media;
     struct _aluno *next;
 }; typedef struct _aluno Aluno;
@@ -62,10 +62,21 @@ void printList(Aluno *first){
     for (aux = first; aux != NULL; aux=aux->next){
         printf("%s\n%s\n%d/%d/%d\n%lf\n", aux->matricula, aux->nome, dat->dia, dat->mes,dat->ano, aux->media );
     }
-    printf("\n");
 }
 
-
+Aluno *excludeAluno(Aluno *first, Aluno *f, int id){
+    Aluno *aux;
+    if (first == NULL){
+        first = f;
+        return first;
+    }
+    for (aux=first;aux->next!=NULL;aux=aux->next){
+        if (aux->matricula==id) break;
+    }
+    f->next=aux->next;
+    aux->next=f;
+    return first;
+}
 
 int main(){
 
@@ -75,6 +86,8 @@ int main(){
     first = addHead(first, createAluno("asf2", "Teste 2", 22,2,2011,23.4));
     first = addHead(first, createAluno("asf3", "Teste 3", 5,4,2021 ,23.4));
     first = addHead(first, createAluno("asf4"  ,"Maria", 5,5,1547 ,23.4));
+
+    first = excludeAluno(first  ,createAluno("23432"  ,"asf", 5,5,1547 ,23.4), 'asf2');
 
     printList(first);
 

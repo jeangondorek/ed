@@ -3,7 +3,6 @@
 
 #define N 40
 
-//asfas
 struct _func {
     int cod;
     char nome[N];

@@ -7,7 +7,7 @@ int resto(int n, int d, int r){
     }
     return resto(n-d, d, r+1);
 }
-
+//
 int main(){
     int n, d, r;
     r = 0;

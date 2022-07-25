@@ -16,7 +16,7 @@ int emptyList(Funcionario *first){
         return 1;
     return 0;
 }
-
+/*/
 /*
     Adiciona um elemento antes do primeiro.
 */

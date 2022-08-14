@@ -43,7 +43,7 @@ sentinela *intersec(S *s1, S *s2){
                 }
                 else{
                     s3->last->next = new;
-                    mew->prev = s3->last;
+                    new->prev = s3->last;
                     s3->last=new;
                 }
                 
@@ -90,7 +90,7 @@ void *deletePoint(sentinela *s, int x, int y){
             free(aux);
             if (previous == NULL)
             {
-                aux = s->fist;
+                aux = s->first;
                 continue;
             }
             else

@@ -60,7 +60,7 @@ void *deletePoint(sentinela *s, int x, int y){
     while (aux!=NULL)
     {
         previous = aux->prev;
-        if (aux-> == x && aux->y ==y)
+        if (aux->x == x && aux->y ==y)
         {
             if (s->first == aux)
             {

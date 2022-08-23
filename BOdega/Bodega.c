@@ -100,7 +100,7 @@ empresa cadastrarEmpresa(empresa bodega){
     printf("Nome fantasia: ");
     scanf("%s", &bodega.nome);
 
-    printf("CNPJ: ");
+    printf("CNPJ(somente números): ");
     scanf("%d", &bodega.cnpj);
     printf("\e[H\e[2J");
     
@@ -126,7 +126,7 @@ void cadastrarBebidas(sentinelaBebida *sBebida){
     scanf("%s", drink->nome);
 
     printf("Conteúdo em Ml da embalagem: ");
-    scanf("%f", &drink->conteudoMl);
+    scanf("%.2f", &drink->conteudoMl);
 
     printf("Teor alcoólico: ");
     scanf("%f", &drink->teorAlcoolico);

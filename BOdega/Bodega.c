@@ -126,16 +126,16 @@ void cadastrarBebidas(sentinelaBebida *sBebida){
     scanf("%s", drink->nome);
 
     printf("Conteúdo em Ml da embalagem: ");
-    scanf("%.2f", &drink->conteudoMl);
+    scanf("%.f", &drink->conteudoMl);
 
     printf("Teor alcoólico: ");
-    scanf("%f", &drink->teorAlcoolico);
+    scanf("%.f", &drink->teorAlcoolico);
 
     printf("Quantidade em estoque: ");
     scanf("%d", &drink->quantidadeEstoque);
 
     printf("Valor de venda: ");
-    scanf("%f", &drink->valor);
+    scanf("%.f", &drink->valor);
 
     drink->anterior = NULL;
     drink->proximo = NULL;
@@ -165,10 +165,10 @@ void listarBebidas(sentinelaBebida *sBebida){
     for(aux = sBebida->primeiro; aux != NULL; aux = aux->proximo){
         printf("Código: %d\n", aux->codigo);
         printf("Nome: %s\n", aux->nome);
-        printf("Conteudo Ml: %f\n", aux->conteudoMl);
-        printf("Preço de venda: %f\n", aux->valor);
+        printf("Conteudo Ml: %.2f\n", aux->conteudoMl);
+        printf("Preço de venda: %.2f\n", aux->valor);
         printf("Quantidade em Estoque: %d\n", aux->quantidadeEstoque);
-        printf("Teor alcoólico: %f\n", aux->teorAlcoolico);
+        printf("Teor alcoólico: %.2f\n", aux->teorAlcoolico);
         printf("-----------------------------------------------\n");        
     }
 }
